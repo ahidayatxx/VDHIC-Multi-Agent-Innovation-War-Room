@@ -25,7 +25,7 @@ if ZAI_KEY:
     os.environ["OPENAI_API_BASE"] = ZAI_BASE_URL
     from google.adk.models.lite_llm import LiteLlm
     model_obj = LiteLlm(
-        model=f"openai/{ZAI_MODEL}",
+        model=f"custom_openai/{ZAI_MODEL}",
         api_key=ZAI_KEY,
         api_base=ZAI_BASE_URL,
     )
