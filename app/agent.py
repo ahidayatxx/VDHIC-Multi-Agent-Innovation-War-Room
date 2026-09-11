@@ -23,8 +23,44 @@ ZAI_MODEL = os.environ.get("ZAI_MODEL", "glm-5.2")
 if ZAI_KEY:
     os.environ["OPENAI_API_KEY"] = ZAI_KEY
     os.environ["OPENAI_API_BASE"] = ZAI_BASE_URL
-    from google.adk.models.lite_llm import LiteLlm
-    model_obj = LiteLlm(
+    from google.adk.models.lite_llm import LiteLlm, LiteLLMClient
+
+    class ZaiLiteLLMClient(LiteLLMClient):
+        def _sanitize_messages(self, messages):
+            if isinstance(messages, list):
+                for msg in messages:
+                    if isinstance(msg, dict) and "content" in msg and isinstance(msg["content"], list):
+                        clean_content = []
+                        for item in msg["content"]:
+                            if isinstance(item, dict):
+                                item_type = item.get("type")
+                                if item_type == "text":
+                                    clean_content.append(item)
+                                elif "text" in item and item["text"]:
+                                    clean_content.append({"type": "text", "text": item["text"]})
+                                elif "thinking" in item and item["thinking"]:
+                                    clean_content.append({"type": "text", "text": item["thinking"]})
+                                else:
+                                    clean_content.append({"type": "text", "text": str(item)})
+                            elif isinstance(item, str):
+                                clean_content.append({"type": "text", "text": item})
+                        msg["content"] = clean_content
+            return messages
+
+        async def acompletion(self, model, messages, tools, **kwargs):
+            messages = self._sanitize_messages(messages)
+            return await super().acompletion(model, messages, tools, **kwargs)
+
+        def completion(self, model, messages, tools, stream=False, **kwargs):
+            messages = self._sanitize_messages(messages)
+            return super().completion(model, messages, tools, stream=stream, **kwargs)
+
+    class ZaiLiteLlm(LiteLlm):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
+            self.llm_client = ZaiLiteLLMClient()
+
+    model_obj = ZaiLiteLlm(
         model=f"custom_openai/{ZAI_MODEL}",
         api_key=ZAI_KEY,
         api_base=ZAI_BASE_URL,
