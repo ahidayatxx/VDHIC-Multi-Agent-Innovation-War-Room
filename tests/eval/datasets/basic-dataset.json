@@ -1,0 +1,37 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "vdhic_telecardiology_screening",
+      "prompt": {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Evaluate a tele-cardiology AI screening solution designed for Puskesmas primary care centers in West Java, Indonesia. Provide a VDHIC v1.25 analysis covering SaMD classification, SATUSEHAT FHIR requirements, and BPJS Kapitasi alignment."
+          }
+        ]
+      }
+    },
+    {
+      "eval_case_id": "vdhic_tb_ai_radiology",
+      "prompt": {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Review an AI Chest X-Ray diagnostic software for Tuberculosis screening in regional Indonesian hospitals. Focus on Governance Spine SaMD risk tier, UU PDP data localization compliance, and ICD-10 / LOINC coding standards."
+          }
+        ]
+      }
+    },
+    {
+      "eval_case_id": "vdhic_diabetic_retinopathy",
+      "prompt": {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Provide a VDHIC v1.25 review report for an autonomous AI diabetic retinopathy screening system seeking entry into the Kemenkes Regulatory Sandbox."
+          }
+        ]
+      }
+    }
+  ]
+}

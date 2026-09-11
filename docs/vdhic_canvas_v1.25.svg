@@ -1,0 +1,475 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1020" style="background-color: #f8fafc;">
+  <!-- Define gradients and styles -->
+  <defs>
+    <!-- Header gradient -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Governance gradient (Red) -->
+    <linearGradient id="govGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Discover gradient (Green) -->
+    <linearGradient id="discoverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Design gradient (Purple) -->
+    <linearGradient id="designGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Deliver gradient (Amber) -->
+    <linearGradient id="deliverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d97706;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Value gradient (Orange) -->
+    <linearGradient id="valueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ea580c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- ============================================ -->
+  <!-- TITLE HEADER -->
+  <!-- ============================================ -->
+  <rect x="0" y="0" width="1400" height="80" fill="url(#headerGrad)"/>
+  <text x="700" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Value-Based Digital Health Innovation Canvas
+  </text>
+  <text x="700" y="60" font-family="Arial, sans-serif" font-size="14" fill="#e0e7ff" text-anchor="middle">
+    From Problem to Impact: Navigating Indonesia's Digital Health Ecosystem
+  </text>
+  
+  <!-- Version info -->
+  <text x="1380" y="25" font-family="Arial, sans-serif" font-size="10" fill="#93c5fd" text-anchor="end">v1.25</text>
+  
+  <!-- ============================================ -->
+  <!-- GOVERNANCE SPINE (Top Banner) - 4 BLOCKS -->
+  <!-- ============================================ -->
+  <rect x="20" y="95" width="1360" height="100" rx="8" fill="url(#govGrad)" filter="url(#shadow)"/>
+  <text x="700" y="120" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    GOVERNANCE SPINE — Safety, Compliance &amp; Technology Framework
+  </text>
+  
+  <!-- Governance Block 1: Regulatory Pathway -->
+  <rect x="40" y="135" width="315" height="50" rx="5" fill="#ffffff" opacity="0.95"/>
+  <text x="197" y="155" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc2626" text-anchor="middle">
+    🏛️ Regulatory Pathway
+  </text>
+  <text x="197" y="172" font-family="Arial, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">
+    Medical Device Classification • Sandbox • TKDN • ISO 13485
+  </text>
+  
+  <!-- Governance Block 2: Clinical Governance -->
+  <rect x="370" y="135" width="315" height="50" rx="5" fill="#ffffff" opacity="0.95"/>
+  <text x="527" y="155" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc2626" text-anchor="middle">
+    ⚕️ Clinical Governance
+  </text>
+  <text x="527" y="172" font-family="Arial, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">
+    Protocols • Patient Safety • Adverse Events • PNPK
+  </text>
+  
+  <!-- Governance Block 3: Data Governance -->
+  <rect x="700" y="135" width="315" height="50" rx="5" fill="#ffffff" opacity="0.95"/>
+  <text x="857" y="155" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc2626" text-anchor="middle">
+    🔒 Data Governance
+  </text>
+  <text x="857" y="172" font-family="Arial, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">
+    UU PDP • PP 71/2019 • Consent • Security Standards
+  </text>
+  
+  <!-- Governance Block 4: Tech Governance (NEW) -->
+  <rect x="1030" y="135" width="315" height="50" rx="5" fill="#ffffff" opacity="0.95"/>
+  <text x="1187" y="155" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc2626" text-anchor="middle">
+    ⚙️ Tech Governance
+  </text>
+  <text x="1187" y="172" font-family="Arial, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">
+    Architecture • Cybersecurity • API • DR/BC
+  </text>
+  
+  <!-- ============================================ -->
+  <!-- MAIN 3x3 GRID -->
+  <!-- ============================================ -->
+  
+  <!-- Phase Labels -->
+  <text x="250" y="220" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#059669" text-anchor="middle">
+    DISCOVER
+  </text>
+  <text x="700" y="220" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7c3aed" text-anchor="middle">
+    DESIGN
+  </text>
+  <text x="1150" y="220" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#d97706" text-anchor="middle">
+    DELIVER
+  </text>
+  
+  <!-- Column 1: DISCOVER (Green) -->
+  <!-- Block 1: Health Challenge -->
+  <rect x="40" y="235" width="420" height="175" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="40" y="235" width="420" height="35" rx="8" fill="url(#discoverGrad)"/>
+  <rect x="40" y="260" width="420" height="10" fill="url(#discoverGrad)"/>
+  <text x="250" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    1. HEALTH CHALLENGE
+  </text>
+  <text x="55" y="295" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • What specific health problem are you solving?
+  </text>
+  <text x="55" y="312" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • What is the patient journey &amp; pain points?
+  </text>
+  <text x="55" y="329" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • What epidemiological data supports this need?
+  </text>
+  <text x="55" y="346" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Why hasn't this been solved? Barriers?
+  </text>
+  <text x="55" y="363" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Alignment with Renstra Kemenkes/SDGs?
+  </text>
+  <text x="55" y="395" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af" font-style="italic">
+    Mindset: Design Thinking – Empathy &amp; Problem Definition
+  </text>
+  
+  <!-- Block 2: User Profiles -->
+  <rect x="40" y="420" width="420" height="175" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="40" y="420" width="420" height="35" rx="8" fill="url(#discoverGrad)"/>
+  <rect x="40" y="445" width="420" height="10" fill="url(#discoverGrad)"/>
+  <text x="250" y="445" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    2. USER PROFILES
+  </text>
+  <text x="55" y="480" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Primary: Patients, Providers, or Administrators?
+  </text>
+  <text x="55" y="497" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Demographics, digital literacy, access patterns?
+  </text>
+  <text x="55" y="514" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Behaviors, motivations, constraints?
+  </text>
+  <text x="55" y="531" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Indonesia context: Urban/rural, BPJS segments?
+  </text>
+  <text x="55" y="548" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Who are secondary users &amp; beneficiaries?
+  </text>
+  <text x="55" y="580" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af" font-style="italic">
+    Mindset: Human-Centered Design – User Research
+  </text>
+  
+  <!-- Block 3: Stakeholder Map -->
+  <rect x="40" y="605" width="420" height="175" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="40" y="605" width="420" height="35" rx="8" fill="url(#discoverGrad)"/>
+  <rect x="40" y="630" width="420" height="10" fill="url(#discoverGrad)"/>
+  <text x="250" y="630" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    3. STAKEHOLDER MAP
+  </text>
+  <text x="55" y="665" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Government: Kemenkes, Komdigi?
+  </text>
+  <text x="55" y="682" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Clinical: Hospitals, professional orgs, KOLs?
+  </text>
+  <text x="55" y="699" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Payers: BPJS Kesehatan, private insurers?
+  </text>
+  <text x="55" y="716" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Industry: Pharma, medtech, telco partners?
+  </text>
+  <text x="55" y="733" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Academic: Research institutions, universities?
+  </text>
+  <text x="55" y="765" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af" font-style="italic">
+    Mindset: Multi-Stakeholder Collaboration
+  </text>
+  
+  <!-- Column 2: DESIGN (Purple) -->
+  <!-- Block 4: Solution Architecture -->
+  <rect x="490" y="235" width="420" height="175" rx="8" fill="#ffffff" stroke="#a78bfa" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="490" y="235" width="420" height="35" rx="8" fill="url(#designGrad)"/>
+  <rect x="490" y="260" width="420" height="10" fill="url(#designGrad)"/>
+  <text x="700" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    4. SOLUTION ARCHITECTURE
+  </text>
+  <text x="505" y="295" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Pillar: Digital Medicine / Dx / Tx / Wellness?
+  </text>
+  <text x="505" y="312" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Mechanism of action for intervention?
+  </text>
+  <text x="505" y="329" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • SaMD only or hardware-integrated?
+  </text>
+  <text x="505" y="346" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Risk classification (Class I, II, III)?
+  </text>
+  <text x="505" y="363" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Digital biomarkers / endpoints captured?
+  </text>
+  <text x="505" y="395" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af" font-style="italic">
+    Tools: Core Digital Health Pillars
+  </text>
+  
+  <!-- Block 5: User Experience -->
+  <rect x="490" y="420" width="420" height="175" rx="8" fill="#ffffff" stroke="#a78bfa" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="490" y="420" width="420" height="35" rx="8" fill="url(#designGrad)"/>
+  <rect x="490" y="445" width="420" height="10" fill="url(#designGrad)"/>
+  <text x="700" y="445" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    5. USER EXPERIENCE
+  </text>
+  <text x="505" y="480" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Core features &amp; key functionality?
+  </text>
+  <text x="505" y="497" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Usability approach (Nielsen, SUS target)?
+  </text>
+  <text x="505" y="514" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Accessibility: Bahasa Indonesia, offline mode?
+  </text>
+  <text x="505" y="531" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Engagement &amp; retention strategy?
+  </text>
+  <text x="505" y="548" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Technical architecture &amp; platform?
+  </text>
+  <text x="505" y="580" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af" font-style="italic">
+    Tools: Usability &amp; UX – Adoption Enabler
+  </text>
+  
+  <!-- Block 6: System Integration -->
+  <rect x="490" y="605" width="420" height="175" rx="8" fill="#ffffff" stroke="#a78bfa" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="490" y="605" width="420" height="35" rx="8" fill="url(#designGrad)"/>
+  <rect x="490" y="630" width="420" height="10" fill="url(#designGrad)"/>
+  <text x="700" y="630" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    6. ENTERPRISE INTEROPERABILITY
+  </text>
+  <text x="505" y="665" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • SATUSEHAT integration approach?
+  </text>
+  <text x="505" y="682" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • FHIR resources to implement?
+  </text>
+  <text x="505" y="699" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • HL7 standards compliance?
+  </text>
+  <text x="505" y="716" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Integration with SIMRS, Pcare, etc.?
+  </text>
+  <text x="505" y="733" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Technical readiness for interoperability?
+  </text>
+  <text x="505" y="765" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af" font-style="italic">
+    Tools: National Health Information System
+  </text>
+  
+  <!-- Column 3: DELIVER (Amber) -->
+  <!-- Block 7: Evidence Plan -->
+  <rect x="940" y="235" width="420" height="175" rx="8" fill="#ffffff" stroke="#fbbf24" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="940" y="235" width="420" height="35" rx="8" fill="url(#deliverGrad)"/>
+  <rect x="940" y="260" width="420" height="10" fill="url(#deliverGrad)"/>
+  <text x="1150" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    7. EVIDENCE PLAN
+  </text>
+  <text x="955" y="295" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Evidence pathway: Pilot → RCT → RWE?
+  </text>
+  <text x="955" y="312" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Clinical endpoints for efficacy?
+  </text>
+  <text x="955" y="329" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Study design &amp; sample size?
+  </text>
+  <text x="955" y="346" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Cost-effectiveness measurement?
+  </text>
+  <text x="955" y="363" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Timeline &amp; milestones for evidence?
+  </text>
+  <text x="955" y="395" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af" font-style="italic">
+    Mindset: Dual Framework – Strategy + Reality
+  </text>
+  
+  <!-- Block 8: Scale Strategy -->
+  <rect x="940" y="420" width="420" height="175" rx="8" fill="#ffffff" stroke="#fbbf24" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="940" y="420" width="420" height="35" rx="8" fill="url(#deliverGrad)"/>
+  <rect x="940" y="445" width="420" height="10" fill="url(#deliverGrad)"/>
+  <text x="1150" y="445" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    8. SCALE STRATEGY
+  </text>
+  <text x="955" y="480" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Go-to-market strategy for Indonesia?
+  </text>
+  <text x="955" y="497" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Pilot sites: Hospitals, Puskesmas?
+  </text>
+  <text x="955" y="514" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Change management for adoption?
+  </text>
+  <text x="955" y="531" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Training &amp; support model?
+  </text>
+  <text x="955" y="548" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Pathway from pilot to national scale?
+  </text>
+  <text x="955" y="580" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af" font-style="italic">
+    Mindset: Systems Thinking – Scaling Complexity
+  </text>
+  
+  <!-- Block 9: Business Model -->
+  <rect x="940" y="605" width="420" height="175" rx="8" fill="#ffffff" stroke="#fbbf24" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="940" y="605" width="420" height="35" rx="8" fill="url(#deliverGrad)"/>
+  <rect x="940" y="630" width="420" height="10" fill="url(#deliverGrad)"/>
+  <text x="1150" y="630" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    9. BUSINESS MODEL
+  </text>
+  <text x="955" y="665" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Revenue model: B2B, B2C, B2G?
+  </text>
+  <text x="955" y="682" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • BPJS reimbursement pathway (INACBGs)?
+  </text>
+  <text x="955" y="699" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Private insurance coverage strategy?
+  </text>
+  <text x="955" y="716" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Unit economics &amp; cost structure?
+  </text>
+  <text x="955" y="733" font-family="Arial, sans-serif" font-size="10" fill="#374151">
+    • Funding: Grants, equity, strategic partners?
+  </text>
+  <text x="955" y="765" font-family="Arial, sans-serif" font-size="9" fill="#9ca3af" font-style="italic">
+    Safety: Financial Governance – Sustainable Investment
+  </text>
+  
+  <!-- ============================================ -->
+  <!-- VALUE ANCHOR (Bottom Banner) - QUINTUPLE AIM -->
+  <!-- ============================================ -->
+  <rect x="20" y="800" width="1360" height="130" rx="8" fill="url(#valueGrad)" filter="url(#shadow)"/>
+  <text x="700" y="825" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    VALUE ANCHOR — Quintuple Aim Outcomes
+  </text>
+  
+  <!-- Value Block 1: Health Equity -->
+  <rect x="40" y="840" width="250" height="80" rx="5" fill="#ffffff" opacity="0.95"/>
+  <text x="165" y="862" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">
+    ⚖️ Health Equity
+  </text>
+  <text x="165" y="880" font-family="Arial, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">
+    Accessible care for all
+  </text>
+  <text x="165" y="895" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">
+    How does this reduce
+  </text>
+  <text x="165" y="907" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">
+    healthcare disparities?
+  </text>
+  
+  <!-- Value Block 2: Population Health -->
+  <rect x="305" y="840" width="250" height="80" rx="5" fill="#ffffff" opacity="0.95"/>
+  <text x="430" y="862" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">
+    📈 Population Health
+  </text>
+  <text x="430" y="880" font-family="Arial, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">
+    Better outcomes at scale
+  </text>
+  <text x="430" y="895" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">
+    What clinical outcomes
+  </text>
+  <text x="430" y="907" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">
+    will improve?
+  </text>
+  
+  <!-- Value Block 3: Patient Experience -->
+  <rect x="570" y="840" width="250" height="80" rx="5" fill="#ffffff" opacity="0.95"/>
+  <text x="695" y="862" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">
+    😊 Patient Experience
+  </text>
+  <text x="695" y="880" font-family="Arial, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">
+    Satisfaction &amp; engagement
+  </text>
+  <text x="695" y="895" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">
+    How will patient
+  </text>
+  <text x="695" y="907" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">
+    satisfaction increase?
+  </text>
+  
+  <!-- Value Block 4: Provider Satisfaction -->
+  <rect x="835" y="840" width="250" height="80" rx="5" fill="#ffffff" opacity="0.95"/>
+  <text x="960" y="862" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">
+    🩺 Provider Satisfaction
+  </text>
+  <text x="960" y="880" font-family="Arial, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">
+    Clinician well-being
+  </text>
+  <text x="960" y="895" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">
+    How does this reduce
+  </text>
+  <text x="960" y="907" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">
+    provider burden?
+  </text>
+  
+  <!-- Value Block 5: Cost Reduction -->
+  <rect x="1100" y="840" width="250" height="80" rx="5" fill="#ffffff" opacity="0.95"/>
+  <text x="1225" y="862" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">
+    💰 Cost Reduction
+  </text>
+  <text x="1225" y="880" font-family="Arial, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">
+    Efficiency &amp; optimization
+  </text>
+  <text x="1225" y="895" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">
+    What efficiency gains
+  </text>
+  <text x="1225" y="907" font-family="Arial, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">
+    are expected?
+  </text>
+  
+  <!-- ============================================ -->
+  <!-- FLOW ARROWS -->
+  <!-- ============================================ -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#64748b" />
+    </marker>
+  </defs>
+  
+  <!-- Horizontal flow arrows between phases -->
+  <path d="M 460 500 L 485 500" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)" opacity="0.4"/>
+  <path d="M 910 500 L 935 500" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)" opacity="0.4"/>
+  
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <rect x="0" y="940" width="1400" height="80" fill="#1e293b"/>
+  <text x="700" y="963" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">
+    Value-Based Digital Health Innovation Canvas (VDHIC) v1.25 
+  </text>
+  <text x="700" y="983" font-family="Arial, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">
+    Australia Awards Fellowship 2025 • Monash University • Regulatory Sandbox Ministry of Health of the Republic of Indonesia 
+  </text>
+  <text x="700" y="1003" font-family="Arial, sans-serif" font-size="10" fill="#475569" text-anchor="middle">
+    Creative Commons Attribution 4.0 International (CC BY 4.0) • For workshops, accelerators, and regulatory sandbox applications
+  </text>
+  
+  <!-- Maturity Legend -->
+  <rect x="20" y="950" width="180" height="50" rx="5" fill="#334155"/>
+  <text x="110" y="968" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#e2e8f0" text-anchor="middle">
+    MATURITY LEVELS
+  </text>
+  <text x="30" y="985" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">
+    ○ Concept  ◐ Validated  ● Implemented  ★ Scaled
+  </text>
+  
+</svg>
