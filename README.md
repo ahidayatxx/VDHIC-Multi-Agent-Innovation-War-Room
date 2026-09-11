@@ -110,8 +110,7 @@ VDHIC-Multi-Agent-Innovation-War-Room/
 │   └── app_utils/             # A2A session & artifact services
 ├── docs/
 │   ├── vdhic_canvas_v1.25.svg # Canvas reference architecture diagram
-│   ├── vdhic_instruction_guide_v1.25.docx # Canvas instruction guide
-│   └── vdhic_review_telemedicine_chronic_disease.md # Sample generated report
+│   └── vdhic_instruction_guide_v1.25.docx # Canvas instruction guide
 ├── tests/
 │   └── unit/
 │       └── test_vdhic_agent.py# Pytest unit tests (4/4 passed)
@@ -188,4 +187,4 @@ For Coolify VPS configuration, see `.agents-cli-spec.md`.
 
 * Scaffolded and managed via [google/agents-cli](https://github.com/google/agents-cli).
 * Built on [Google Agent Development Kit (ADK)](https://google.github.io/adk/).
-* Designed around the **Value-Based Digital Health Innovation Canvas (VDHIC v1.25)** framework by Dr. Ahmad Hidayat.
+* Designed around the **Value-Based Digital Health Innovation Canvas (VDHIC v1.25)** framework by Ahmad Hidayat.
