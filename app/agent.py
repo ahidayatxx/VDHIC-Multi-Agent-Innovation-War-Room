@@ -6,7 +6,7 @@ from typing import Dict, Any, List
 # Explicitly disable Vertex AI ADC mode so google.genai uses API key mode
 os.environ["GOOGLE_GENAI_USE_VERTEXAI"] = "0"
 
-api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY") or os.environ.get("ZAI_API_KEY") or os.environ.get("GLM_API_KEY")
+api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
 if api_key:
     os.environ["GOOGLE_API_KEY"] = api_key
     os.environ["GEMINI_API_KEY"] = api_key
@@ -15,8 +15,22 @@ from google.adk.agents import Agent
 from google.adk.apps import App
 from google.adk.models import Gemini
 
-# Model Configuration
-MODEL = os.environ.get("ZAI_MODEL", os.environ.get("ADK_MODEL", "gemini-3.7-flash"))
+# Dynamic Model Selection: Z.AI / GLM (LiteLlm) vs Gemini
+ZAI_KEY = os.environ.get("ZAI_API_KEY") or os.environ.get("GLM_API_KEY")
+ZAI_BASE_URL = os.environ.get("ZAI_BASE_URL", "https://api.z.ai/api/coding/paas/v4")
+ZAI_MODEL = os.environ.get("ZAI_MODEL", "glm-5.2")
+
+if ZAI_KEY:
+    from google.adk.models.lite_llm import LiteLlm
+    model_obj = LiteLlm(
+        model=f"openai/{ZAI_MODEL}",
+        api_key=ZAI_KEY,
+        api_base=ZAI_BASE_URL,
+    )
+else:
+    MODEL = os.environ.get("ADK_MODEL", "gemini-2.5-flash")
+    model_obj = Gemini(model=MODEL)
+
 
 # --- 1. VDHIC Lookup Tools ---
 
@@ -123,7 +137,7 @@ def bpjs_reimbursement_lookup(query: str) -> str:
 
 regulatory_specialist = Agent(
     name="regulatory_specialist",
-    model=Gemini(model=MODEL),
+    model=model_obj,
     instruction=(
         "You are the Regulatory & Data Protection Specialist for the VDHIC v1.25 Innovation War Room.\n"
         "Your focus is Governance Spine (Block 10: Medical Device / SaMD Classification, ISO 13485/IEC 62304, Kemenkes Regulatory Sandbox) "
@@ -135,7 +149,7 @@ regulatory_specialist = Agent(
 
 interop_specialist = Agent(
     name="interop_specialist",
-    model=Gemini(model=MODEL),
+    model=model_obj,
     instruction=(
         "You are the Interoperability & Tech Architect Specialist for the VDHIC v1.25 Innovation War Room.\n"
         "Your focus is Design Phase (Block 6: Enterprise Interoperability, SATUSEHAT FHIR R4, SIMRS/PCare integration, ICD-10/LOINC/SNOMED CT/KFA terminologies) "
@@ -147,7 +161,7 @@ interop_specialist = Agent(
 
 clinical_specialist = Agent(
     name="clinical_specialist",
-    model=Gemini(model=MODEL),
+    model=model_obj,
     instruction=(
         "You are the Clinical & Evidence Lead Specialist for the VDHIC v1.25 Innovation War Room.\n"
         "Your focus is Discover Phase (Block 1: Health Challenge & Clinical Burden), Deliver Phase (Block 7: Evidence Plan - Feasibility Pilot -> RCT -> RWE), "
@@ -159,7 +173,7 @@ clinical_specialist = Agent(
 
 economics_specialist = Agent(
     name="economics_specialist",
-    model=Gemini(model=MODEL),
+    model=model_obj,
     instruction=(
         "You are the Health Economics & Scale Lead Specialist for the VDHIC v1.25 Innovation War Room.\n"
         "Your focus is Deliver Phase (Block 8: Scale Strategy & Go-To-Market, Block 9: Business Model - BPJS INA-CBGs, Puskesmas Kapitasi, unit economics) "
@@ -173,7 +187,7 @@ economics_specialist = Agent(
 
 root_agent = Agent(
     name="vdhic_warroom_agent",
-    model=Gemini(model=MODEL),
+    model=model_obj,
     instruction=(
         "You are the Lead VDHIC Innovation Coordinator chairing the Value-Based Digital Health Innovation Canvas (VDHIC v1.25) War Room.\n"
         "When an innovator submits a digital health project proposal or canvas draft, coordinate a multi-disciplinary review:\n"
