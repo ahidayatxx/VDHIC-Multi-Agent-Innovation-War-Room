@@ -21,6 +21,8 @@ ZAI_BASE_URL = os.environ.get("ZAI_BASE_URL", "https://api.z.ai/api/coding/paas/
 ZAI_MODEL = os.environ.get("ZAI_MODEL", "glm-5.2")
 
 if ZAI_KEY:
+    os.environ["OPENAI_API_KEY"] = ZAI_KEY
+    os.environ["OPENAI_API_BASE"] = ZAI_BASE_URL
     from google.adk.models.lite_llm import LiteLlm
     model_obj = LiteLlm(
         model=f"openai/{ZAI_MODEL}",
